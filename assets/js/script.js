@@ -13,6 +13,13 @@ var taskFormHandler = function() {
       type: taskTypeInput
     };
 
+    if (!taskNameInput || !taskTypeInput) {
+      alert("You fill out the task form!");
+      return false;
+    }
+
+    formEl.reset();
+
     // Send it as an arument
     createTaskEl(taskDataObj);
 
